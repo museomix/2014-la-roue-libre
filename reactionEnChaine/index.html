@@ -35,25 +35,23 @@
         <script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript">
 
-	  function success(result) {
-	      document.getElementById('uglyiframe').src = result.text;
+	  function lsuccess(result) {
+	      document.getElementById('uglyiframe').href = result.text;
 	  }
-	  
-    function scanCode(){
-		alert('scanCode');
-    cordova.plugins.barcodeScanner.scan(success,
-		      function (error) {
-		          alert("Scanning failed: " + error);
-		      }
-		   );
 
-    }
-</script>
+	  function lerror(error) {
+	      alert("Scanning failed: " + error);
+	  }
+
+	  function scanCode(){
+	      cordova.plugins.barcodeScanner.scan(lsuccess, lerror);
+	  }
+	</script>
         <script type="text/javascript">
             app.initialize();
         </script>
 <div>
-    <input type="button" value="Scan Code" onclick="scanCode();"/><br/><br/>
+    <center><input type="button" value="Scan Code" onclick="scanCode();"/></center>
     <iframe src="http://www.nazkerin.org" id="uglyiframe" width="100%" height="680px" frameborder="0"/>
 <div>
     </body>
