@@ -42,24 +42,25 @@
         <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
     function scanCode(){
+		alert('scanCode');
+		cordova.plugins.barcodeScanner.scan(
+		      function (result) {
+		          alert("We got a barcode\n" +
+		                "Result: " + result.text + "\n" +
+		                "Format: " + result.format + "\n" +
+		                "Cancelled: " + result.cancelled);
+		      }, 
+		      function (error) {
+		          alert("Scanning failed: " + error);
+		      }
+		   );
 
-    var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-	scanner.scan(
-	    function(result){
-		alert("Scanned Code: " + result.text
-		      + ". Format: " + result.format
-		      + ". Cancelled: " + result.cancelled);
-	    },
-	    function(error){
-		alert("Scan failed: " + error);
-	    }
-	);
     }
 
 function encodeData(){
     var data = document.getElementById("data").value;
     if (data != ''){
-	window.plugins.barcodeScanner.encode(
+	cordova.plugins.barcodeScanner.encode(
 	    BarcodeScanner.Encode.TEXT_TYPE, data,
 	    function(success){
 		alert("Encode success: " + success);
