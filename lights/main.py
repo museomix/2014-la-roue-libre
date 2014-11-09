@@ -7,7 +7,7 @@ app = Flask(__name__)
 url_to_int = {
     "droite": CrossRoad.DIR_RIGHT,
     "gauche": CrossRoad.DIR_LEFT,
-    "haut": CrossRoad.DIR_UP,
+    "centre": CrossRoad.DIR_UP,
 }
 
 @app.route('/light/<int:crossroad>/<direction>')

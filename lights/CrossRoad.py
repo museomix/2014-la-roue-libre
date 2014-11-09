@@ -7,6 +7,11 @@ DIR_LEFT=0
 DIR_UP=2
 DIR_DOWN=3
 
+colors = [[255, 255, 0],
+          [255, 0, 255],
+          [0, 255, 255]]
+
+DMX = pysimpledmx.DMXConnection(None)
 
 class Lane:
     dmx_channel = 0
@@ -15,26 +20,34 @@ class Lane:
 
     def __init__(self, channel):
         self.dmx_channel = channel
-        self.dmx_handle = pysimpledmx.DMXConnection(self.dmx_channel)
+        self.dmx_handle = DMX
 
-        self.dmx_handle.setChannel(1, 15) # set DMX channel 1 to full
-        self.dmx_handle.setChannel(2, 255) # set DMX channel 2 to 128
-        self.dmx_handle.setChannel(3, 255)   # set DMX channel 3 to 0
-        self.dmx_handle.setChannel(4, 0)   # set DMX channel 3 to 0
-        self.dmx_handle.setChannel(17, 15) # set DMX channel 1 to full
-        self.dmx_handle.setChannel(18, 0) # set DMX channel 2 to 128
-        self.dmx_handle.setChannel(19, 255)   # set DMX channel 3 to 0
-        self.dmx_handle.setChannel(20, 0)   # set DMX channel 3 to 0
+        # intensity
+        self.dmx_handle.setChannel(16*(self.dmx_channel-1)+1, 15)
+
+        # color
+        for i in range(3):
+            print("channel %d, value %d" % (16*(self.dmx_channel-1)+i+2,
+                                       colors[self.dmx_channel-1][i]))
+
+            self.dmx_handle.setChannel(16*(self.dmx_channel-1)+i+2,
+                                       colors[self.dmx_channel-1][i])
+
         self.dmx_handle.render()
+
+    def passby(self):
+        self.passerby += 1
 
     def update(self):
         print("dmx %d : passerby %s" % (self.dmx_channel, self.passerby))
-        self.passerby += 1
-        self.dmx_handle.setChannel(1+(self.dmx_channel-1)*16, self.passerby, autorender=True)
+        self.dmx_handle.setChannel(1+(self.dmx_channel-1)*16, self.passerby)
 
 
-CROSSROADS = [[Lane(1), Lane(2)],
+CROSSROADS = [[Lane(1), Lane(2), Lane(3)],
                      ]
 
 def update_crossroad(crossroad, direction):
-    CROSSROADS[crossroad][direction].update()
+    CROSSROADS[crossroad][direction].passby()
+    for i in range(len(CROSSROADS[crossroad])):
+        CROSSROADS[crossroad][i].update()
+    CROSSROADS[0][0].dmx_handle.render()
