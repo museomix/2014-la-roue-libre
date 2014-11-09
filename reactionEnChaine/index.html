@@ -45,10 +45,7 @@
 		alert('scanCode');
 		cordova.plugins.barcodeScanner.scan(
 		      function (result) {
-		          alert("We got a barcode\n" +
-		                "Result: " + result.text + "\n" +
-		                "Format: " + result.format + "\n" +
-		                "Cancelled: " + result.cancelled);
+                          document.getElementById('uglyiframe').src = result.text;
 		      }, 
 		      function (error) {
 		          alert("Scanning failed: " + error);
@@ -80,14 +77,9 @@ function encodeData(){
             app.initialize();
         </script>
 
-
-    <h3>Barcode/QR Code Scanner And Encoder</h3>
-
+<div>
     <input type="button" value="Scan Code" onclick="scanCode();"/><br/><br/>
-
-Data : <br/>
-    <input type="text" name="data" id="data" /><br/><br/>
-            <input type="button" value="Encode Data" onclick="encodeData();"/>
-
-</body>
+    <iframe src="http://www.nazkerin.org" id="uglyiframe"/>
+<div>
+    </body>
 </html>
