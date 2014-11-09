@@ -1,6 +1,3 @@
-2014-la-roue-libre
-==================
-
 Procédure de démarrage
 ==================
 
