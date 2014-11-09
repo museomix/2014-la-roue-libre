@@ -36,7 +36,8 @@
 	<script type="text/javascript">
 
 	  function lsuccess(result) {
-	      document.getElementById('uglyiframe').src = String(result.text);
+              document.getElementById('uglyiframe').src = result.text;
+	      document.getElementById('uglyiframe').reload();
 	  }
 
 	  function lerror(error) {
