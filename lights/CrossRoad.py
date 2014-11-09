@@ -8,7 +8,7 @@ DIR_UP=2
 DIR_DOWN=3
 
 colors = [[255, 255, 0],
-          [255, 0, 255],
+          [255, 0, 0],
           [0, 255, 255]]
 
 DMX = pysimpledmx.DMXConnection(None)
