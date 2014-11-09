@@ -37,14 +37,14 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
-	<p>COIN COIN</p>
-    <p>hey hey</p>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/barcodescanner.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
     function scanCode(){
-	window.plugins.barcodeScanner.scan(
+
+    var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+	scanner.scan(
 	    function(result){
 		alert("Scanned Code: " + result.text
 		      + ". Format: " + result.format
