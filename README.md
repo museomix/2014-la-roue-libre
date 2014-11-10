@@ -39,4 +39,8 @@ Pour les détails techniques voir le readme dans le dossier appli
 BackEnd
 -------
 
-Le contenu est hébergé sur http://museomix.rezopole.net/statique/rouelibre
+Le contenu est hébergé sur
+http://museomix.rezopole.net/statique/rouelibre/vues/index.php
+
+L'IP et le port du server d'éclairage sont indiqués dans le fichier config.js à
+la racine du serveur web.

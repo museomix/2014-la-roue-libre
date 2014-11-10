@@ -1,0 +1,113 @@
+#contenu{
+    width: 800px;
+    margin: auto;
+    height: 530px;
+    
+    /*Ce paramètre peut être modifié
+    mais l'adaptation se fera tout de même*/
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+#contenu div{
+    float: left;
+}
+
+#titreManufacture{
+	height: 40px;
+	width: 800px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
+    font-size: 35px;
+	border-bottom: 1px solid white;
+}
+
+#titreManufacture p{
+	font-size: 30px;
+}
+
+#boutonRetour{
+	height: 40px;
+	width: 400px;
+}
+
+#bouton{
+	font-family: Arial,sans-serif;
+    font-size: 1.3em;
+    width: 200px;
+    height: 32px;
+    padding-top: 7px; /*permet le centrage vertical*/
+    text-align: center;
+    color: #000;
+    background: #444;
+    background: #444;
+    background: linear-gradient( #555, #2C2C2C);
+    border-radius: 8px;
+    text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+    margin-left: 80px;
+}
+
+#sousTitreTexte{
+	height: 360px;
+	width: 400px;
+	margin-top: 15px;
+}
+
+#sousTitreManu{
+	height: 30px;
+	width: 400px;
+	font-family: 'Playfair Display', serif;
+	font-style:italic;
+	font-weight: 400;
+	text-align:center;
+	font-size:20px;
+    color: rgba(0, 0, 0, 1.0);
+}
+
+#texte{
+	text-align: justify;
+	width: 360px;
+	height: 380px;
+	font-family: 'Playfair Display', serif;
+	font-style:italic;
+	font-weight: 400;
+	text-align:center;
+	font-size:14px;
+    color: rgba(0, 0, 0, 1.0);
+}
+
+#conteneurImages{
+	height: 360px;
+	width: 400px;
+}
+
+#image1, #image2,{
+	height: 245px;
+	width: 400px;
+}
+
+#dimIm1{
+	width: 300px;
+	margin: 10px;
+	margin-left: 50px;
+}
+
+#dimIm2{
+	width: 380px;
+	margin: 10px;
+}
+
+#dimIm3{
+	width: 300px;
+	margin: 10px;
+	margin-left: 50px;
+}
+
+#dimIm4{
+	width: 380px;
+	margin: 10px;
+}
+
+a{
+	text-decoration: none;
+}

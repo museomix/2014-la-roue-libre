@@ -1,0 +1,40 @@
+html, body {
+    height: 100%
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size:12px;
+    color: rgba(255, 255, 255, 1.0);
+}
+ 
+html, body, div, p, ul, li, a, input, img, textarea {
+    margin: 0px;
+    padding: 0px;
+}
+ 
+#page {
+    min-height: 100%;
+    position: relative;
+}
+ 
+#bloc-principal {
+    padding-bottom: 60px;
+    padding-top: 10px;
+}
+ 
+#header{
+    height: 50px;
+    background-color: black;
+}
+ 
+#footer {
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+}

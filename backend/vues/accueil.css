@@ -1,0 +1,67 @@
+#contenu{
+    width: 880px;
+    margin: auto;
+    height: 550px;
+    
+    /*Ce paramètre peut être modifié
+    mais l'adaptation se fera tout de même*/
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+#contenu div{
+    float: left;
+}
+
+#conteneurBoutonTitreArmes{
+    height: 200px;
+    width: 150px;
+    margin-left: 290px;
+}
+
+#armes{
+    width: 800px;
+    height: 200px;
+}
+
+#fleche1{
+    height: 150px;
+    width: 150px;
+    clear: both;
+}
+
+#fleche{
+    height: 300px;
+    width: 300px;
+}
+
+#titreArmes{
+    height: 50px;
+    width: 300px;
+    text-align: center;
+	margin-top:130px;
+}
+
+#titreArmes p{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
+    font-size: 35px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 1.0);
+}
+
+#rubanCycles{
+    height: 200px;
+    width: 800px;
+}
+
+#conteneurBoutonTitreRuban{
+    height: 200px;
+    width: 150px;
+}
+
+#conteneurBoutonTitreCycle{
+    height: 200px;
+    width: 150px;
+    margin-left: 435px;
+}
