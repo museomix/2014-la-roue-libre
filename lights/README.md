@@ -28,7 +28,7 @@ API:
 
 Here is the webapp entry point
 
- > server:5000/light/<num intersection>/<direction>
+ `server:5000/light/<num intersection>/<direction>`
 
   - intersection est un entier identifiant l'intersection
   - direction parmi droite, gauche, haut
