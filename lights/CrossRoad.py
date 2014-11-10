@@ -11,7 +11,18 @@ colors = [[255, 255, 0],
           [255, 0, 0],
           [0, 255, 255]]
 
-DMX = pysimpledmx.DMXConnection(None)
+
+tty_num = 0
+while True:
+    try:
+        DMX = pysimpledmx.DMXConnection(tty_num)
+    except:
+        print("failed to get ttyUSB%s, trying ttyUSB%s" % (tty_num, tty_num+1))
+        tty_num += 1
+        if tty_num > 6: tty_num = 0
+    else:
+        break
+
 
 class Lane:
     dmx_channel = 0

@@ -29,10 +29,10 @@ class DMXConnection(object):
             self.dmx_frame.append(0)
 
       #open com
-#        if comport is not None: port_num = comport
-#        else:
-        port_num = "/dev/ttyUSB0"
-
+        if comport is not None:
+            port_num = "/dev/ttyUSB%d" % comport
+        else:
+            port_num = "/dev/ttyUSB0"
 #        try:
         self.com = serial.Serial(port_num, baudrate=COM_BAUD, timeout=COM_TIMEOUT)
 #        except:
