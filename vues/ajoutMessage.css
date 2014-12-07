@@ -1,0 +1,60 @@
+#contenu{
+    width: 800px;
+    margin: auto;
+    height: 400px;
+    background-color: red;
+    
+    /*Ce paramètre peut être modifié
+    mais l'adaptation se fera tout de même*/
+    margin-top: 150px;
+    margin-bottom: 150px;
+    background-image: url(../images/mot_fond.png);
+}
+
+#contenu div{
+    float: left;
+}
+
+#consigne{
+	height: 80px;
+	width: 800px;
+	margin-top: 25px;
+}
+
+#consigne p{
+	text-align: center;
+}
+
+#commentaire{
+	height: 200px;
+	width: 800px;
+}
+
+#cconteneurTextarea{
+	height: 160px;
+	width: 600px;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+#text{
+	padding: 10px;
+	height: 140px;
+	width: 580px;
+	resize: none;
+	border: none;
+	border-radius: 10px;
+}
+
+#conteneurBouton{
+	height: 40px;
+	width: 800px;
+	text-align: center;
+}
+
+#boutonImage{
+	height: 30px;
+	width: 200px;
+	margin-top: 5px;
+	margin-left: 300px;
+}

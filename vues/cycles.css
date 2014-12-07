@@ -1,0 +1,70 @@
+#contenu{
+    width: 800px;
+    margin: auto;
+    height: 790px;
+    
+    /*Ce paramètre peut être modifié
+    mais l'adaptation se fera tout de même*/
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+#contenu div{
+    float: left;
+}
+
+.titreCycles{
+	height: 40px;
+	width: 800px;
+	text-align: center;
+}
+
+.titreCycles p{
+	font-size: 25px;
+	margin-top: 5px;
+}
+
+#questionCycles{
+	height: 20px;
+	width: 800px;
+	text-align: center;
+}
+
+#paraCycles{
+	height: 80px;
+	width: 800px;
+}
+
+#paraCycles p{
+	margin-top: 10px;
+}
+
+#photos{
+	width: 660px;
+	height: 210px;
+	margin-left: 70px;
+	margin-right: 70px;
+}
+
+.conteneurPhotoTitre{
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+#conteneurPlan{
+	height: 400px;
+	width: 800px;
+}
+
+#imgPlan{
+	height: 400px;
+	width: 800px;
+}
+
+.imgCercle{
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
